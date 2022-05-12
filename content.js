@@ -2,7 +2,9 @@
 const cssModifications = [
     ".tiktok-dialog { display: none !important; }",
     ".footer-guide { display: none !important; }",
-    ".tiktok-bottom { bottom: 0px !important;}",
+    ".captcha_verify_container { display: none !important; }",
+    // ".tiktok-bottom { bottom: var(--app-menu-height) !important;}",
+    ".tiktok-bottom { bottom: 23px !important;}",
     ".tiktok-bottom-left { pointer-events: none !important; }",
     ".tiktok-bottom a { pointer-events: none !important; }",
     ".home-header { display: none !important; }",
