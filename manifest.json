@@ -1,0 +1,27 @@
+{
+    "name": "kosmi-tiktok-extension",
+    "description": "Pretend Kosmi is an iphone",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+        "https://*.tiktok.com/*"
+    ],
+    "declarative_net_request" : {
+        "rule_resources" : [{
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }]
+    },
+    "content_scripts": [
+       {
+           "js": ["content.js"],
+           "matches": ["https://www.tiktok.com/*"],
+           "run_at": "document_idle"
+       }
+    ]
+}
