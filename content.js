@@ -15,6 +15,17 @@ const cssModifications = [
     ".heart-twink, .tiktok-toolbar-comment, .tiktok-toolbar-share {pointer-events: none !important;"
 ];
 
+
+// 72 1440
+
+// 64 1150
+
+// 56 800
+
+// 49
+
+
+
 const generateModalSelectors = () => {
     for (let index = 0; index < 1000; index++) {
         cssModifications.push(`.backdrop-${index} { display: none !important; },`)
