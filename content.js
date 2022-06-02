@@ -32,11 +32,26 @@ function loadCSS(css) {
     head.appendChild(style);
 }
 
-const applDomAlterations = () => {
+const applyDomAlterations = () => {
     for (const mod of cssModifications) {
         loadCSS(mod);
     }
 }
 
-generateModalSelectors();
-applDomAlterations();
+const fadeOut = () => {
+    loadCSS("html { background: black; }");
+    loadCSS("body { opacity: 0; }");    
+}
+
+const fadeIn = () => { 
+    loadCSS("body { transition: opacity 1s linear; }");
+    loadCSS("body { opacity: 1; }");
+}
+
+fadeOut();
+
+window.addEventListener("load", function() {
+    generateModalSelectors();
+    applyDomAlterations();
+    fadeIn();
+});
