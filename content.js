@@ -54,4 +54,7 @@ window.addEventListener("load", function() {
     generateModalSelectors();
     applyDomAlterations();
     fadeIn();
+    setInterval(function) {
+      applyDomAlterations();
+    }, 5000);
 });
