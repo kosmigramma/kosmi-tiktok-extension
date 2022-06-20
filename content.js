@@ -17,6 +17,7 @@ const cssModifications = [
     ".main { height: calc(100% - 49px) !important;}",
     "@media (min-width: 1150px) { .main { height: calc(100% - 64px) !important; }}",
     "@media (min-width: 1440px) { .main { height: calc(100% - 72px) !important; }}",
+    "#app { z-index: 9999; position: fixed}",
 ];
 
 const generateModalSelectors = () => {
@@ -54,7 +55,4 @@ window.addEventListener("load", function() {
     generateModalSelectors();
     applyDomAlterations();
     fadeIn();
-    setInterval(function() {
-      applyDomAlterations();
-    }, 5000);
 });
